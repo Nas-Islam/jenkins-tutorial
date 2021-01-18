@@ -1,11 +1,6 @@
 pipeline{
         agent any
         stages{
-            stage('Clone Repository'){
-                steps{
-                    sh "git clone https://gitlab.com/qacdevops/chaperootodo_client.git"
-                }
-            }
             stage('Install Docker'){
                 steps{
                     sh "curl https://get.docker.com -S | sudo bash"
