@@ -8,7 +8,7 @@ pipeline{
             }
             stage('Install Docker'){
                 steps{
-                    sh "curl https://get.docker.com | sudo bash"
+                    sh "curl https://get.docker.com -S | sudo bash"
                     sh "sudo usermod -aG docker \$(whoami)"
                 }
             }
